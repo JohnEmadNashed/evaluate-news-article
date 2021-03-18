@@ -29,11 +29,11 @@ const handleSubmit = async () => {
       <tr><td>Confidence:</td><td>${data.confidence}</td></tr>
       <tr><td>Irony:</td><td>${data.irony}</td></tr>
       </table>`;
+
       // Enable the submit button
       submitBtn.disabled = false;
     });
   } else {
-    console.log("checker true");
     alert("Please try with a valid Url !");
   }
 };
