@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Sentiment Analyzer</title>
+    <link
+      href="https://fonts.googleapis.com/css2?&family=Roboto:wght@300;500;700"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    />
+  <link href="main.9c61e9d5c08268acbca7.css" rel="stylesheet"></head>
+
+  <body>
+    <header>
+      <h1>Sentient Analyzer</h1>
+    </header>
+    <header>
+      <span>Enter a URL of an article / a blog to discover its sentiment.</span>
+    </header>
+
+    <main>
+      <div class="container">
+        <section>
+          <form id="form">
+            <label for="article-url">URL</label>
+            <input
+              id="article-url"
+              type="text"
+              name="input"
+              value=""
+              placeholder="Enter Article URL here"
+            />
+            <button type="submit" id="btn-submit">Submit</button>
+          </form>
+        </section>
+
+        <section>
+          <strong>Neural Network Analysis Report:</strong>
+          <div id="results">
+            <p id="logger">Waiting for input...</p>
+          </div>
+        </section>
+        <!-- <section>
+          <strong>Form Results:</strong>
+          <div id="text"></div>
+          <div id="agreement"></div>
+          <div id="subjectivity"></div>
+          <div id="confidence"></div>
+          <div id="irony"></div>
+          <div id="score_tag"></div>
+        </section> -->
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="container">
+        <div class="footer__site-info">
+          <nav class="footer__social">
+            <a href="#" class="social__item"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="social__item"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social__item"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="#" class="social__item"
+              ><i class="fab fa-pinterest"></i
+            ></a>
+            <a href="#" class="social__item"><i class="fab fa-github"></i></a>
+          </nav>
+          <div class="footer__copyright">
+            John Emad &copy; - 2021 Powered by
+            <a href="https://www.udacity.com/" target="_blank">Udacity</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Check that service workers are supported
+      if ("serviceWorker" in navigator) {
+        // Use the window load event to keep the page load performant
+        window.addEventListener("load", () => {
+          navigator.serviceWorker.register("/service-worker.js");
+        });
+      }
+    </script>
+  <script type="text/javascript" src="main.js"></script></body>
+</html>
